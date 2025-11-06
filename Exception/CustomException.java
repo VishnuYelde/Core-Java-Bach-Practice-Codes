@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class CustomException {
+    public static void main(String[] args) {
+        System.out.println("---Main Start---");
+        int bal = 15000;
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter the withdrawable amount: ");
+        int amt = s.nextInt();
+        if(amt <= bal){
+            System.out.println(amt +" withdraw successfully\n" + " Available Balance: "+ (bal-amt));
+        }
+        else{
+            try {
+                throw new InsufficientException();
+                
+                //! This can also possible
+                // InsufficientException i1 = new InsufficientException();
+                // throw i1;
+                
+            } catch (InsufficientException i1) {
+                System.out.println(i1.getMessage());
+            } finally{
+                s.close();
+                System.out.println("Thankyou for visiting, have a nice day");
+            }
+        }
+        System.out.println("---Main End---");
+    }
+
+}
+// Checked Exception
+class InsufficientException extends Exception{
+    public String getMessage(){
+        return "Aare kelya tuzhyakade yevdhe paisech nahit barik l**d**chy*";
+    }
+}
+

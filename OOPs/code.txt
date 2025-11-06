@@ -1,0 +1,178 @@
+// Cab.java
+public class  Cab {
+    
+    public int fare;
+
+    Cab(int fare){
+        this.fare = fare;
+    }
+
+
+
+    public int CalculateFare (Cab cab){
+
+        int totalfare = 0;
+        if(cab instanceof Mini){
+            Mini mini = (Mini) cab;
+            totalfare = mini.getDistance()*10;
+            mini.displayDetails();
+            return  totalfare;
+        }
+        else if (cab instanceof Sedan) {
+            Sedan sedan = (Sedan)cab;
+            totalfare = sedan.getDistance()*15;
+            sedan.displayDetails();
+            return  totalfare;
+        }
+        else if (cab instanceof SUV) {
+            SUV suv = (SUV)cab;
+            totalfare = suv.getDistance()*20;
+            suv.displayDetails();
+            return  totalfare;
+        }
+        return totalfare;
+    }
+
+    public void booking(){
+        System.out.println("Car Booked Successfully");
+    }
+}
+
+Mini.java
+public class Mini extends  Cab{
+
+    private int distance;
+
+    Mini(int fare,int distance){
+        super(fare);
+        this.distance= distance;
+    }
+
+    public int getDistance(){
+        return distance;
+    }
+    public  void displayDetails(){
+        System.out.println("Booked Cab Mini");
+        System.out.println("Fare per/Km : 10Rs");
+        System.out.println("TOTAL DISTANCE = "+this.distance);
+    }
+}
+
+
+Sedan.java
+public class Sedan extends  Cab{
+
+    private int distance;
+
+    Sedan(int fare,int distance){
+        super(fare);
+        this.distance= distance;
+    }
+
+    public int getDistance(){
+        return distance;
+    }
+    public  void displayDetails(){
+        System.out.println("Booked Cab Sedan");
+        System.out.println("Fare per/Km : 15Rs");
+        System.out.println("TOTAL DISTANCE = "+this.distance);
+    }
+}
+
+
+SUV.java
+public class SUV extends  Cab{
+
+    private int distance;
+
+    SUV(int fare,int distance){
+        super(fare);
+        this.distance= distance;
+    }
+
+    public int getDistance(){
+        return distance;
+    }
+    public  void displayDetails(){
+        System.out.println("Booked Cab SUV");
+        System.out.println("Fare per/Km : 20Rs");
+        System.out.println("TOTAL DISTANCE = "+this.distance);
+    }
+}
+
+
+
+Uber.java
+public class Uber{
+    private Cab cab;
+
+    public Uber() {
+    }
+
+
+    Uber(Cab cab){
+        this.cab =cab;
+    }
+
+    public void DisplayCab(){
+        System.out.println("WELCOME TO UBER SELECT CAR ACCORDING TO YOUR PREFERENCE");
+        
+    }
+}
+
+
+
+UberDriver.java
+
+
+import java.util.Scanner;
+
+public class UberDriver {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("WELCOME");
+
+        Uber uber = new Uber();
+        Cab cab;
+        int distance;
+
+        uber.DisplayCab();
+
+        int CHOICE1 = '\u0000';
+
+        System.out.println("Enter your choice");
+        CHOICE1 = scanner.nextInt();
+
+        switch (CHOICE1) {
+            case 1  :
+                System.out.println("Plase Enter the Distance");
+                distance = scanner.nextInt();
+                cab = new Mini(0,distance);
+                int MiniFare = cab.CalculateFare(cab);
+                System.out.println("Total Fare : "+MiniFare);
+                cab.booking();
+                break;
+            case 2  :
+                System.out.println("Plase Enter the Distance");
+                distance = scanner.nextInt();
+                cab = new Sedan(0,distance);
+                int SedanFare = cab.CalculateFare(cab);
+                System.out.println("Total Fare : "+SedanFare);
+
+                cab.booking();
+                break;
+            case 3  :
+                System.out.println("Plase Enter the Distance");
+                distance = scanner.nextInt();
+                cab = new SUV(0,distance);
+                int SUVFare = cab.CalculateFare(cab);
+                System.out.println("Total Fare : "+SUVFare);
+                cab.booking();
+                break;
+            default:
+                throw new AssertionError();
+        }
+    }
+    
+}
+
