@@ -20,9 +20,9 @@ public class AverageOfArrayElements {
             arr[index] = s.nextInt();
             sum += arr[index];
         }
-
         //calculating avg
         double average = sum / arr.length;
+        System.out.println("Sum of elements: " + sum);
         System.out.println("Average of elements : " + average);
         s.close();
     }

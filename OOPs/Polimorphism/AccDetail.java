@@ -1,5 +1,5 @@
 // Constructor Overloading
-// In a class having more than one Constructor with different parameters(like in datatype of para, no. of para and order of para) (signature) is called Constructor Overloading.
+// In a class having more than one Constructor with different parameters(like datatype of para, no. of para and order of para) (signature) is called Constructor Overloading.
 
 public class AccDetail{
     long accno;

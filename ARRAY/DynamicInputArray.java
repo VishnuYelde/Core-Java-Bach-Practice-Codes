@@ -26,16 +26,6 @@ public class DynamicInputArray
 		{
 			System.out.print(arr[i] + " ");
 		}
-
-		System.out.println();
-
-
-
-
-
-
-
-
-
+		s.close();
 	}
 }

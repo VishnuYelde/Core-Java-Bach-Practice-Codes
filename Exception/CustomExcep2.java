@@ -4,6 +4,7 @@ public class CustomExcep2 {
     public static void main(String[] args) {
         System.out.println("---Main Start---");
         Scanner s = new Scanner(System.in);
+        System.out.println("Enter Age: ");
         int age = s.nextInt();
 
         s.close();
@@ -14,7 +15,7 @@ public class CustomExcep2 {
         else{
             try {
                 throw new MinorException();
-
+ 
                 //! This can also possible
                 // MinorException m1 = new MinorException();
                 // throw m1;
@@ -30,6 +31,6 @@ public class CustomExcep2 {
 // Unchecked Exception
 class MinorException extends RuntimeException{
     public String getMessage(){
-        return "Aare ajun tu andyat aahe re";
+        return "Ajun tu andyat aahe re";
     }
 }

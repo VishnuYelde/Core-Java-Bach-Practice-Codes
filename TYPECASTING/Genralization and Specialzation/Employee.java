@@ -12,7 +12,7 @@ public class Employee extends Person {
     }
 
     void jankari(){
-        System.out.println("Employee name in "+ name+ " Age is "+ age+ " Gender is "+gender+ "EmpId is "+empId+ " Salary is "+ sal+ " Department no. is " + deptno);
+        System.out.println("Employee name in "+ name+ " Age is "+ age+ " Gender is "+gender+ " EmpId is "+empId+ " Salary is "+ sal+ " Department no. is " + deptno);
     }
     
 }

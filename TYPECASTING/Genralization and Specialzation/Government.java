@@ -17,7 +17,7 @@ public class Government {
             System.out.println("Tax payable amount is " + e.sal*12*0.18 + "/- only.");
         }
         else{
-            System.out.println("Main gareeb hoo aur gareeb se tax nahi leneka");
+            System.out.println("Main gareeb hoo aur gareeb se tax nahi lete.");
         }
     }
 }

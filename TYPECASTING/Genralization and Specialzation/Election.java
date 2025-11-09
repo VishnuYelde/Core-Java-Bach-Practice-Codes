@@ -21,7 +21,6 @@ public class Election {
         // g1.Scholarship(e1); //CTE
 
 
-
         // g1.taxPayment(p1); //CTE
         // g1.taxPayment(s1); //CTE
         g1.taxPayment(e1);

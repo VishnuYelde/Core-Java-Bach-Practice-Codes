@@ -8,15 +8,13 @@ public class CustomException {
         System.out.println("Enter the withdrawable amount: ");
         int amt = s.nextInt();
         if(amt <= bal){
-            System.out.println(amt +" withdraw successfully\n" + " Available Balance: "+ (bal-amt));
+            System.out.println(amt +" withdraw successfully\n" + "Available Balance: "+ (bal-amt));
         }
         else{
             try {
-                throw new InsufficientException();
-                
-                //! This can also possible
-                // InsufficientException i1 = new InsufficientException();
-                // throw i1;
+                throw new InsufficientException(); 
+                // InsufficientException ie = new InsufficientException();  //! This can also possible
+                // throw ie;
                 
             } catch (InsufficientException i1) {
                 System.out.println(i1.getMessage());
