@@ -2,9 +2,8 @@
 
 // Inheritance means use of extends keyword by child class. 
 
-//! Taking properties or methods from Parent class to child class using extends keywords in konwn as Inheritance. 
-
-//todo Here we are doing method Overriding also;
+//! Taking properties or methods from Parent class to child class using extends keywords is known as Inheritance. 
+// Here we are doing method Overriding also;
 
 public class Animal {
     

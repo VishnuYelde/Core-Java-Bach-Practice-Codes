@@ -30,7 +30,7 @@ public class CustomException {
 // Checked Exception
 class InsufficientException extends Exception{
     public String getMessage(){
-        return "Aare kelya tuzhyakade yevdhe paisech nahit barik l**d**chy*";
+        return "Aare kelya tuzhyakade yevdhe paisech nahi";
     }
 }
 

@@ -29,7 +29,7 @@ public class Demo {
         s.setAge(22);
         s.setPercentage(90);
 
-        System.out.println(s.getAge());
-        System.out.println(s.getPercentage() + "%");
+        System.out.println("Student Age: "+s.getAge());
+        System.out.println("Student Percentage: "+s.getPercentage() + "%");
     }
 }
