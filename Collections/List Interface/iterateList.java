@@ -8,24 +8,24 @@ public class iterateList {
         alphabets.add("C");
         alphabets.add("D");
         alphabets.add("E");
-        System.out.println(alphabets.size());
+        System.out.println("size: " + alphabets.size());
 
         // Ieteration: Forward
         System.out.println("Iteration: Forward");
-        for(int i = 0; i < alphabets.size(); i++){
-            System.out.print(alphabets.get(i)+" ");
+        for (int i = 0; i < alphabets.size(); i++) {
+            System.out.print(alphabets.get(i) + " ");
         }
 
         // "Iteration: Reverse"
         System.out.println("\nIteration: Reverse");
-        for (int i = alphabets.size() -1; i >= 0; i--) {
-            System.out.print(alphabets.get(i)+" ");
+        for (int i = alphabets.size() - 1; i >= 0; i--) {
+            System.out.print(alphabets.get(i) + " ");
         }
 
-        // Iterate using forEach(identifier variable_declaration: reference)
-        System.out.println("\nForEach loop: ");
+        // Iterate using forEach(identifier variable_declaration: collection_reference)
+        System.out.println("\nforEach loop: ");
         for (String i : alphabets) {
-            System.out.print(i+" ");
+            System.out.print(i + " ");
         }
     }
 }

@@ -1,10 +1,9 @@
 public class MinMaxArray {
 
     public static void main(String[] args) {
-        int[] arr = {12, 5, 7, 98, 2, 45, 32};
+        int[] arr = { 102, 5, 7, 98, 2, 45, 32 };
         findMinMax(arr);
     }
-
 
     // most efficient way to find min and max in a single pass
     public static void findMinMax(int[] arr) {
@@ -16,9 +15,11 @@ public class MinMaxArray {
         int min = arr[0];
         int max = arr[0];
 
-        for (int i = 1; i < arr.length; i++) {
-            if (arr[i] < min) min = arr[i];
-            if (arr[i] > max) max = arr[i];
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] < min)
+                min = arr[i];
+            if (arr[i] > max)
+                max = arr[i];
         }
 
         System.out.println("Minimum: " + min);

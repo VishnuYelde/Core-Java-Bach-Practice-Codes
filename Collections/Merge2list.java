@@ -35,5 +35,4 @@ public class Merge2list {
         System.out.println("ZigZag Merged List: " + mergeZigZag(list1, list2));
     }
 
-
 }
