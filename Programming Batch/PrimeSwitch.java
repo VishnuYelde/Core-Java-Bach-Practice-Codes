@@ -12,7 +12,7 @@ public class PrimeSwitch {
             case 1:
                 System.out.print("Enter a number: ");
                 int a = s.nextInt();
-                System.out.println((Prime(a)? a+" is Prime No":"Not a Prime no."));
+                System.out.println((Prime(a) ? a + " is a Prime No" : a + " is Not a Prime no."));
                 break;
             case 2:
                 System.out.println("Enter the range: ");
@@ -28,23 +28,26 @@ public class PrimeSwitch {
     }
 
     public static boolean Prime(int a) {
-        if (a <= 1) return false;
-        if (a == 2 || a == 3) return true;
-        if (a % 2 == 0 || a % 3 == 0) return false;
+        if (a <= 1)
+            return false;
+        if (a == 2 || a == 3)
+            return true;
+        if (a % 2 == 0 || a % 3 == 0)
+            return false;
 
-        for(int i = 5; i*i < a; i+=6){
-            if(a % i == 0 || a % (i+2) == 0){
+        for (int i = 5; i * i < a; i += 6) {
+            if (a % i == 0 || a % (i + 2) == 0) {
                 return false;
             }
         }
         return true;
     }
 
-    public static void PrimeRange(int a, int b){
+    public static void PrimeRange(int a, int b) {
         System.out.println("Prime numbers: ");
 
-        for(int i = a; i <= b; i++){
-            if(Prime(i)) {
+        for (int i = a; i <= b; i++) {
+            if (Prime(i)) {
                 System.out.println(i);
             }
         }
