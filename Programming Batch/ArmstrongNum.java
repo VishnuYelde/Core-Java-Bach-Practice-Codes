@@ -1,8 +1,9 @@
 public class ArmstrongNum {
-    
-    // 153 -> 1^3=1 + 5^3=125 + 3^3=27 = 153 (number == output num) //! count num = power of each digit
 
-    public static int Count(int n){
+    // 153 -> 1^3=1 + 5^3=125 + 3^3=27 = 153 (number == output num)
+    // ! count num = power of each digit
+
+    public static int Count(int n) {
         int count = 0;
         while (n > 0) {
             count++;
@@ -11,7 +12,7 @@ public class ArmstrongNum {
         return count;
     }
 
-    public static boolean ArmstrongNo(int n){
+    public static boolean ArmstrongNo(int n) {
 
         int og = n;
         int count = Count(n);
@@ -24,19 +25,18 @@ public class ArmstrongNum {
         return og == sum;
     }
 
-    public static int Power(int rem, int count){
+    public static int Power(int rem, int count) {
 
         int pow = 1;
-        for(int i = 1; i <= count; i++){
+        for (int i = 1; i <= count; i++) {
             pow = pow * rem;
         }
         return pow;
     }
 
     public static void main(String[] args) {
-        int n = 1;
-        System.out.println((ArmstrongNo(n)? "Armstrong number":"Not an Armstrong number"));
+        int n = 153;
+        System.out.println((ArmstrongNo(n) ? "Armstrong number" : "Not an Armstrong number"));
     }
 
-    
 }
