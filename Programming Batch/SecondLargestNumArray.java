@@ -11,6 +11,9 @@ public class SecondLargestNumArray {
                 }
             }
         }
+        // for (int j = 0; j < arr.length; j++) {
+        // System.out.print(arr[j] + " "); // Iteration of sorted array
+        // }
         System.out.println(arr[arr.length - 2]);
     }
 }
