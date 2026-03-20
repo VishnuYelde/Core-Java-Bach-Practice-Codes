@@ -1,4 +1,5 @@
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Set;
 
 public class Dupno {
@@ -13,8 +14,8 @@ public class Dupno {
         // empty set, only unique element will be added
         HashSet<Integer> set = new HashSet<>();
 
-        // duplicate element will be added
-        HashSet<Integer> dupHashSet = new HashSet<>();
+        // duplicate element will be added - LinkedHashSet maintains insertion order
+        LinkedHashSet<Integer> dupHashSet = new LinkedHashSet<>();
 
         for (int num : arr) {
             if (!set.add(num)) { // same element not added, only unique element is added

@@ -1,3 +1,6 @@
+import java.util.HashMap;
+import java.util.Map;
+
 public class DuplicateNumberWithCount {
     public static void main(String[] args) {
         int[] array = { 10, 20, 25, 33, 55, 10, 25 };
@@ -9,6 +12,8 @@ public class DuplicateNumberWithCount {
         System.out.println("\n");
 
         findDuplicatesWithCount(array);
+
+        System.out.println(dupNoMap(array));
     }
 
     public static void findDuplicatesWithCount(int[] arr) {
@@ -37,5 +42,22 @@ public class DuplicateNumberWithCount {
                 System.out.println("Number: " + arr[i] + " - Count: " + count);
             }
         }
+    }
+
+    public static Map<Integer, Integer> dupNoMap(int[] arr) {
+
+        HashMap<Integer, Integer> uniqueNo = new HashMap<>();
+        for (int element : arr) {
+            uniqueNo.put(element, uniqueNo.getOrDefault(element, 0) + 1);
+        }
+
+        HashMap<Integer, Integer> duplicate = new HashMap<>();
+        for (int key : uniqueNo.keySet()) {
+            if (uniqueNo.get(key) > 1) {
+                duplicate.put(key, uniqueNo.get(key));
+
+            }
+        }
+        return duplicate;
     }
 }
