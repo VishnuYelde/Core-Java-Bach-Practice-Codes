@@ -8,12 +8,15 @@ public class MostFrequentChar {
 
     public static Character mostFreqChar(String str) {
         int[] freq = new int[256];
+        // count the frequency of each char
         for (int i = 0; i < str.length(); i++) {
             freq[str.charAt(i)]++;
         }
 
         char maxChar = ' ';
         int maxCount = 0;
+
+        // Find the char with max count/freq
         for (int i = 0; i < str.length(); i++) {
             if (freq[str.charAt(i)] > maxCount) {
                 maxCount = freq[str.charAt(i)];
